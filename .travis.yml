@@ -1,0 +1,11 @@
+nstall:  
+      - brew update
+          - brew install sdl2
+script:  
+      - xcodebuild -project "HelloWorld.xcodeproj" -scheme "HelloWorld" -destination "platform=iOS Simulator,name=iPhone X,OS=11.0" clean build
+
+language: swift  
+osx_image: xcode9.0  
+xcode_project: HelloWorld.xcodeproj  
+xcode_scheme: TravisExample  
+xcode_sdk: iphonesimulator9.2  
